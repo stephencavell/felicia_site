@@ -1,0 +1,55 @@
+//SCSS StyleSheet
+
+//imports:
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:400,700');
+
+html {
+    font-family: 'Nunito Sans', sans-serif;
+    background-color: whitesmoke;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.title {
+   
+    height: 200px;
+    
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+    h1 {
+        align-items: center;
+        text-align: center;
+    }
+}
+
+.boxes {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 25px;
+    
+    max-width: 600px;
+    
+    align-self: center;
+}
+
+.box {
+    height: 200px;
+    width: 200px;
+    border: 1px solid black;
+    
+    justify-self: center;
+    align-content: center;
+    
+    text-align: center;
+}
+
+#1 {
+    //grid-column-start:1;
+    //grid-row-start: 1;
+}
