@@ -5,7 +5,7 @@
 
 html {
     font-family: 'Nunito Sans', sans-serif;
-    background-color: whitesmoke;
+    //background-color: whitesmoke;
     height: 100%;
 }
 
@@ -15,13 +15,73 @@ body {
 
 .title {
    
-    height: 200px;
+    //height: 200px;
     
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    //justify-content: center;
+    //align-content: center;
+    
+    max-width: 100%;
+    h1, h3 {
+        //align-self: center;
+        text-align: center;
+        max-width: 100%;
+    }
+}
+
+.wrapper {
+    display:flex;
+    flex-flow: row wrap;
     justify-content: center;
+    align-items: center;
     
-    h1 {
-        align-self: center;
+    img {
+        max-width: 500px;
+        height: auto;
+        
+        margin:20px;
+    }
+}
+
+#editorial {
+    //display: none;
+}
+
+.wrapper2 {
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    
+    height: 70%;
+    
+    
+    a {
+        max-width: 40%;
+        height: auto;
+        
+        margin:20px;
+        text-align: center;
+        
+    }
+    
+    img {
+        max-width: 100%;
+        height: auto;
+    } 
+}
+    
+nav {
+    //position: 
+    position: fixed;
+    top:20px;
+    left:50px;
+    z-index: 1;
+    width: 100px;
+    
+    a {
+        margin: 10px;
     }
 }
 
