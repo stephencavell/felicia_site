@@ -1,7 +1,5 @@
 //picture-loader.js
 
-
-
 if(window.addEventListener && window.requestAnimationFrame &&
 	document.getElementsByClassName) window.addEventListener('load', function() {
 
@@ -9,26 +7,23 @@ if(window.addEventListener && window.requestAnimationFrame &&
 		window.addEventListener('resize', checkView);
 
 		let imgs = document.getElementsByClassName('unloaded');
-		let imgRef = [];
-
-		for(let i = 0; i < imgs.length; i++) {
-			imgRef.push(0);
-		}
 
 		function elementInView(e) {
 			
 			let rect = e.getBoundingClientRect();
 
 			return(
-				(rect.top <= (window.innerHeight || document.documentElement.clientHeight) || rect.bottom >= 0) &&
-				(rect.left <= (window.innerWidth || document.documentElement.clientWidth) || rect.right >= 0)
+				((rect.top <= (window.innerHeight || document.documentElement.clientHeight) && rect.top >= 0) ||
+				(rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && rect.bottom >= 0)) &&
+				((rect.left <= (window.innerWidth || document.documentElement.clientWidth) && rect.left >= 0) ||
+				(rect.right <= (window.innerWidth || document.documentElement.clientWidth) && rect.right >= 0))
 				);
 		}
 
 		function setImage(img) {
 			let src = img.dataset.src;
 			img.setAttribute('src', src);
-			img.setAttribute('class', 'no-blur');
+			img.setAttribute('class', 'loaded');
 		}
 
 		function checkView() {
@@ -48,4 +43,6 @@ if(window.addEventListener && window.requestAnimationFrame &&
 		}
 
 		checkView();
+
+
 	});
