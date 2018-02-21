@@ -33,7 +33,7 @@ if(window.addEventListener && window.requestAnimationFrame &&
 				window.removeEventListener('resize', checkView);
 			}
 			else {
-				for(let i=0; i<imgs.length; i++){
+				for(let i=imgs.length-1; i>=0; i--){
 					if(elementInView(imgs[i])){
 						setImage(imgs[i]);
 					}
