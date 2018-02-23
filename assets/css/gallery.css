@@ -1,0 +1,43 @@
+
+
+.gallery {
+	position: fixed;
+	top: 50%;
+	left: 0;
+	transform: translate(0, -50%);
+	z-index: 1;
+
+	background-color: black;
+
+	min-height: 100px;
+	width: 100%;
+
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-around;
+	align-items: center;
+
+	/*display: none;*/
+}
+
+.gallery-photo {
+	height: auto;
+}
+
+.gallery-photo-description {
+	color: white;
+	text-align: center;
+}
+
+.button-arrow-left, .button-arrow-right {
+	color: white;
+}
+
+.button-arrow-left {
+	float: left;
+	width: auto;
+}
+
+.button-arrow-right {
+	float: right;
+}
