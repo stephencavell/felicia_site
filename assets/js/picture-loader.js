@@ -1,4 +1,6 @@
-//picture-loader.js
+
+
+//CHECKS IF PAGE IMAGES ARE IN VIEW AND IF SO LOADS THEM
 
 if(window.addEventListener && window.requestAnimationFrame &&
 	document.getElementsByClassName) window.addEventListener('load', function() {
@@ -27,7 +29,6 @@ if(window.addEventListener && window.requestAnimationFrame &&
 		}
 
 		function checkView() {
-			console.log('imgs length: ' + imgs.length);
 			if(imgs.length <= 0) {
 				window.removeEventListener('scroll', checkView);
 				window.removeEventListener('resize', checkView);
@@ -39,10 +40,7 @@ if(window.addEventListener && window.requestAnimationFrame &&
 					}
 				}
 			}
-			
 		}
 
 		checkView();
-
-
 	});
