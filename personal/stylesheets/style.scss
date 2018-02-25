@@ -1,0 +1,104 @@
+//SCSS StyleSheet
+
+//imports:
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:400,700');
+
+//VARIABLES
+
+$image-size: 25rem;
+
+html {
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+h1, div {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    display: block;
+}
+
+.header-name {
+	margin-top: 3rem;
+	margin-bottom: 3rem;
+	font-size: 3rem;
+
+	width: 100%;
+}
+
+.photo-nav-box {
+
+	height: $image-size;
+	width: $image-size;
+
+	display: inline-block;
+	position: relative;
+
+	margin: 3rem;
+
+}
+
+.photo-nav-box:hover {
+
+	.photo-nav-text {
+		color: red;
+	}
+
+}
+
+.photo-nav-link, .photo-nav-image {
+	height: 100%;
+	width: 100%;
+}
+
+.photo-nav-text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	width: 100%;
+
+	color: white;
+	font-size: 3rem;
+
+	cursor: pointer;
+}
+
+//Settings for small screens
+// @media only screen and (max-width: 750px) and (max-device-width: 750px) {
+    
+//     //Reduces title font size
+//     h1 {
+//         font-size: 24px;
+//     }
+//     h3 {
+//         font-size: 15px;
+//     }
+//     //makes nav standard inline
+//     nav {
+//         position: static;
+//         width: auto;
+        
+//         a {
+//             display: block;
+//             text-align: center;
+//             margin-top: 5px;
+//             margin-bottom: 5px;
+//             border-bottom: solid black 1px;
+            
+//             font-size: 15px;
+//         }
+//     }
+    
+// }
