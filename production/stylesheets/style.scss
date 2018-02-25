@@ -1,0 +1,150 @@
+//SCSS StyleSheet
+
+//imports:
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:400,700');
+
+//mixins:
+
+// Flexbox display
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+// Flex Direction and Wrap
+// - applies to: flex containers
+// <flex-direction> || <flex-wrap>
+@mixin flex-flow($flow) {
+  -webkit-flex-flow: $flow;
+     -moz-flex-flow: $flow;
+      -ms-flex-flow: $flow;
+          flex-flow: $flow;
+}
+
+// Axis Alignment
+// - applies to: flex containers
+// flex-start | flex-end | center | space-between | space-around 
+@mixin justify-content($justify) {
+  -webkit-justify-content: $justify;
+     -moz-justify-content: $justify;
+      -ms-justify-content: $justify;
+          justify-content: $justify;
+            -ms-flex-pack: $justify;
+}
+
+// Cross-axis Alignment
+// - applies to: flex containers
+// flex-start | flex-end | center | baseline | stretch 
+@mixin align-items($align) {
+  -webkit-align-items: $align;
+     -moz-align-items: $align;
+      -ms-align-items: $align;
+          align-items: $align;
+}
+
+//Transitions
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+html {
+    font-family: 'Nunito Sans', sans-serif;
+    height: 100%;
+}
+
+body {
+    height: 100%;
+}
+
+h1, h3, div {
+    text-align: center;
+}
+
+#contact_info, #pm {
+    margin-top: 50px;
+}
+
+.wrapper {
+    @include flexbox();
+    @include flex-flow(row wrap);
+    @include justify-content(center);
+    @include align-items(center);
+}
+
+.img_container {
+    width: 100%;
+    max-width: 250px;
+    margin: 20px;
+    
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+.img_container:hover {
+    .container_text {
+        opacity: 1;
+    }
+}
+
+.container_text {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    color: black;
+    opacity: 0;
+    @include transition(opacity .1s);
+}
+
+nav {
+    position: fixed;
+    top:20px;
+    left:50px;
+    z-index: 1;
+    width: 100px;
+    
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    display: block;
+}
+
+
+//Settings for small screens
+@media only screen and (max-width: 750px) and (max-device-width: 750px) {
+    
+    //Reduces title font size
+    h1 {
+        font-size: 24px;
+    }
+    h3 {
+        font-size: 15px;
+    }
+    //makes nav standard inline
+    nav {
+        position: static;
+        width: auto;
+        
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            border-bottom: solid black 1px;
+            
+            font-size: 15px;
+        }
+    }
+    
+}

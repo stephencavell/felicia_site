@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito+Sans:400,700");
+html {
+  font-family: 'Nunito Sans', sans-serif;
+  height: 100%; }
+
+body {
+  height: 100%; }
+
+h1, h3, div {
+  text-align: center; }
+
+#contact_info, #pm {
+  margin-top: 50px; }
+
+.wrapper {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -moz-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center; }
+
+.img_container {
+  width: 100%;
+  max-width: 250px;
+  margin: 20px; }
+  .img_container img {
+    max-width: 100%;
+    height: auto; }
+
+.img_container:hover .container_text {
+  opacity: 1; }
+
+.container_text {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  color: black;
+  opacity: 0;
+  -webkit-transition: opacity 0.1s;
+  -moz-transition: opacity 0.1s;
+  -ms-transition: opacity 0.1s;
+  -o-transition: opacity 0.1s;
+  transition: opacity 0.1s; }
+
+nav {
+  position: fixed;
+  top: 20px;
+  left: 50px;
+  z-index: 1;
+  width: 100px; }
+
+a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  display: block; }
+
+@media only screen and (max-width: 750px) and (max-device-width: 750px) {
+  h1 {
+    font-size: 24px; }
+
+  h3 {
+    font-size: 15px; }
+
+  nav {
+    position: static;
+    width: auto; }
+    nav a {
+      display: block;
+      text-align: center;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      border-bottom: solid black 1px;
+      font-size: 15px; } }
+
+/*# sourceMappingURL=style.css.map */
