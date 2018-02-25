@@ -1,7 +1,0 @@
-.blur {
-	filter: blur(20px);
-}
-
-img {
-	transition: filter .2s;
-}
