@@ -1,37 +1,64 @@
 //gallery-controller.js
 
 $(function() {
-	var urbanFarmers = [
-	{'url':'imgs/urban_farmers/UF__01_LG.jpg'},
-	{'url':'imgs/urban_farmers/UF__02_LG.jpg'},
-	{'url':'imgs/urban_farmers/UF__03_LG.jpg'},
-	{'url':'imgs/urban_farmers/UF__04_LG.jpg'},
-	{'url':'imgs/urban_farmers/UF__05_LG.jpg'},
-	{'url':'imgs/urban_farmers/UF__06_LG.jpg'},
-	{'url':'imgs/urban_farmers/UF__07_LG.jpg'},
-	{'url':'imgs/urban_farmers/UF__08_LG.jpg'},
-	{'url':'imgs/urban_farmers/UF__09_LG.jpg'},
-	{'url':'imgs/urban_farmers/UF__10_LG.jpg'},
-	{'url':'imgs/urban_farmers/UF__11_LG.jpg'},
-	{'url':'imgs/urban_farmers/UF__12_LG.jpg'},
-	];
+	
+	function openGallery() {
 
-	function openHoleInTheSky() {
-		alert("open hole in the sky!!");
-	}
+//INITIALIZE GALLERY VARIABLES
+		var start;
+		var end;
+		var index;
+		var photos = $('.photo-box');
 
-	function openUrbanFarmers() {
-		
+		if($(this).data('name') == 'Urban') {
+			start = 0;
+			index = start;
+			end = 11;
+		}
+		else if($(this).data('name') == 'Hole') {
+			start = 12;
+			index = start;
+			end = 29;
+		}
 
+//FUNCTIONS OF THE GALLERY
+		function closeGallery() {
+			index = 0;
+			$('.gallery-view').fadeOut();
+		}
+
+		function moveLeft() {
+			if(index > start) index--;
+			else index = end;
+			updateView();
+		}
+
+		function moveRight() {
+			if(index < end) index++;
+			else index = start;
+			updateView();
+		}
+
+		function updateView() {
+			$.each(photos, function(key) {
+				if(key == index) {
+					$(this).show();
+				} else {
+					$(this).hide();
+				}
+			});
+		}
+
+//UPDATE VIEW, INITIALIZE BUTTON LISTNERS, SHOW GALLERY
+		updateView();
+
+		$('.button-left').on('click', moveLeft);
+		$('.button-right').on('click', moveRight);
+		$('.button-close').on('click', closeGallery);
 		$('.gallery-view').fadeIn();
 
 	}
 
-	$('#hole-its-nav').on('click', openHoleInTheSky);
-	$('#urban-farmers-nav').on('click', openUrbanFarmers);
+	$('.photo-nav-box').on('click', openGallery);
 
-	$('.button-close').on('click', function() {
-		$('.gallery-view').fadeOut();
-	});
-	
 });
