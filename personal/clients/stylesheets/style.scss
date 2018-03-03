@@ -1,0 +1,93 @@
+//SCSS StyleSheet
+
+//imports:
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:400,700');
+@import 'gallery';
+
+//VARIABLES
+
+$image-size: 25rem;
+
+html {
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+h1, div {
+    text-align: center;
+}
+
+nav {
+    position: fixed;
+    top:20px;
+    left:50px;
+    z-index: 1;
+    width: 20rem;
+    
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    display: block;
+}
+
+.page {
+	height: 100%;
+	width: 100%;
+}
+
+.header-name {
+	margin-top: 3rem;
+	margin-bottom: 3rem;
+	font-size: 3rem;
+
+	width: 100%;
+}
+
+.photo-nav-box {
+
+	height: $image-size;
+	width: $image-size;
+
+	display: inline-block;
+	position: relative;
+
+	margin: 3rem;
+
+	overflow: hidden;
+
+}
+
+.photo-nav-box:hover {
+
+	.photo-nav-text {
+		color: white;
+	}
+
+}
+
+.photo-nav-link, .photo-nav-image {
+	//height: 100%;
+	width: 100%;
+}
+
+.photo-nav-text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	width: 100%;
+
+	color: black;
+	font-size: 1.5rem;
+
+	cursor: pointer;
+}
