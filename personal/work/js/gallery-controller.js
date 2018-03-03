@@ -1,8 +1,80 @@
 //gallery-controller.js
-
 $(function() {
 
-	const urbanGallery = [
+//GALLERY OBJECT CONTROLS VIEW
+	function Gallery(name, imgs, view) {
+		
+		this.name = name;
+		this.imgs = imgs;
+		this.index = 0;
+		this.view = view;
+
+		let _this = this;
+
+		this.view.on('click', '.button-right', _this, function() {
+			_this.nextImg();
+		});
+
+		this.view.on('click', '.button-left', _this, function() {
+			_this.prevImg();
+		});
+
+		this.view.on('click', '.button-close', _this, function() {
+			_this.closeGallery();
+		});
+
+	}
+
+	Gallery.prototype = {
+
+		nextImg : function() {
+			$('#'+this.name+this.index).hide();
+			(this.index < this.imgs.length-1) ? this.index++ : this.index = 0;
+			this.updateView();
+		},
+
+		prevImg : function() {
+			$('#'+this.name+this.index).hide();
+			(this.index > 0) ? this.index-- : this.index = this.imgs.length-1;
+			this.updateView();
+		},
+
+		openGallery : function() {
+
+			this.updateView();
+			this.view.show();
+
+		},
+
+		closeGallery : function() {
+			
+			this.view.hide();
+			$('#'+this.name+this.index).hide();
+
+		},
+
+		updateView : function() {
+
+			if(!this.imgs[this.index].loaded) {
+				this.addPhotoToGallery(this.imgs[this.index].src);
+				this.imgs[this.index].loaded = true;
+			}
+			$('#'+this.name+this.index).show();
+
+		},
+
+		addPhotoToGallery : function(src) {
+			let photoTemplate = '\
+				<div class="photo-box" id="'+this.name+this.index+'">\
+                    <img class="photo-box-image" alt="Gallery Photo" src="'+src+'"/>\
+                    <div class="photo-box-text"></div>\
+                </div>';
+            this.view.append(photoTemplate);
+		}
+	};
+
+//GALLERY ARRAYS
+	const urban = [
 		{'src': 'imgs/urban_farmers/UF__01_LG.jpg'},
 		{'src': 'imgs/urban_farmers/UF__02_LG.jpg'},
 		{'src': 'imgs/urban_farmers/UF__03_LG.jpg'},
@@ -17,7 +89,7 @@ $(function() {
 		{'src': 'imgs/urban_farmers/UF__012_LG.jpg'},
 	];
 
-	const holeGallery = [
+	const hole = [
 		{'src': 'imgs/hole_in_the_sky/his_1_lg'},
 		{'src': 'imgs/hole_in_the_sky/his_2_lg'},
 		{'src': 'imgs/hole_in_the_sky/his_3_lg'},
@@ -37,86 +109,44 @@ $(function() {
 		{'src': 'imgs/hole_in_the_sky/his_17_lg'},
 		{'src': 'imgs/hole_in_the_sky/his_18_lg'},
 	];
-	
 
-//SECOND VERSION OF GALLERY, INPUTS NEW HTML PIECES WHEN NEEDED
-	function openGallery2() {
-		//GALLERY VARIABLES
-		var galleryImages;
-		var galleryIndex = 0;
-		
-		//grab the name of the gallery to open
-		var gallery = $(this).data('gallery');
-		
-		//ASSIGN PROPER IMAGES TO GALLERY
-		switch(gallery) {
-			case 'urban-gallery':
-				galleryImages = urbanGallery;
-				break;
-			case 'hole-gallery':
-				galleryImages = holeGallery;
-		}
+//CREATE HTML AND CREATE GALLERIES
+	createGallery('urban-gallery');
+	createGallery('hole-gallery');
+	let UrbanGallery = new Gallery('urban-gallery', urban, $('#urban-gallery'));
+	let HoleGallery = new Gallery('hole-gallery', hole, $('#hole-gallery'));
 
-		//IF GALLERY DOESN'T EXIST, CREATE IT
-		if(!$('#'+gallery).length) createGallery(gallery);
+	function createGallery(name) {
+		let galleryTemplate = '\
+			<div class="gallery-view" id="'+name+'">\
+				<div class="button button-left"><</div>\
+	            <div class="button button-right">></div>\
+	            <div class="button button-close">X</div>\
+            </div>';
 
-//CONTAINS CREATES HTML GALLERY WITH ID AND APPENDS TO PAGE
-		function createGallery(name) {
-			let galleryTemplate = '\
-				<div class="gallery-view" id="'+name+'">\
-					<div class="button button-left"><</div>\
-		            <div class="button button-right">></div>\
-		            <div class="button button-close">X</div>\
-	            </div>';
-
-            $('.page').append(galleryTemplate);
-		}
-
-		function addPhotoToGallery(index, src, gallery) {
-			let photoTemplate = '\
-				<div class="photo-box" id="'+gallery+index+'">\
-                    <img class="photo-box-image" alt="Gallery Photo" src="'+src+'"/>\
-                    <div class="photo-box-text"></div>\
-                </div>';
-            $('#'+gallery).append(photoTemplate);
-		}
-
-		function closeGallery() {
-			$('#'+gallery).fadeOut();
-		}
-
-		function moveLeft() {
-			$('#'+gallery+galleryIndex).fadeOut();
-			if(galleryIndex > 0) galleryIndex--;
-			else galleryIndex = galleryImages.length-1;
-			updateView();
-		}
-
-		function moveRight() {
-			//hide current image
-			$('#'+gallery+galleryIndex).fadeOut();
-			//update index
-			if(galleryIndex < galleryImages.length-1) galleryIndex++;
-			else galleryIndex = 0;
-			//update view
-			updateView();
-		}
-
-		function updateView() {
-			//IF IMAGE NO PRESENT, ADD IT
-			if(!$('#'+gallery+galleryIndex).length) 
-				addPhotoToGallery(galleryIndex, galleryImages[galleryIndex].src, gallery);
-			$('#'+gallery+galleryIndex).fadeIn();
-		}
-
-		updateView();
-
-		$('.button-left').on('click', moveLeft);
-		$('.button-right').on('click', moveRight);
-		$('.button-close').on('click', closeGallery);
-		$('#'+gallery).fadeIn();
+        $('.page').append(galleryTemplate);
 	}
 
-	$('.photo-nav-box').on('click', openGallery2);
+//OPEN THE GALLERY
+	function open() {
+		
+		let gallery = this.dataset.gallery;
+		switch(gallery) {
+			case 'urban-gallery':
+				UrbanGallery.openGallery();
+				break;
+			case 'hole-gallery':
+				HoleGallery.openGallery();
+		}
+
+	}
+
+//LISTENER TO TRIGGER OPEN
+	$('.photo-nav-box').on('click', open);
 
 });
+
+
+
+
+
