@@ -119,9 +119,9 @@ $(function() {
 	function createGallery(name) {
 		let galleryTemplate = '\
 			<div class="gallery-view" id="'+name+'">\
-				<div class="button button-left"><</div>\
-	            <div class="button button-right">></div>\
-	            <div class="button button-close">X</div>\
+				<div class="button button-left">&#8592;</div>\
+	            <div class="button button-right">&#8594;</div>\
+	            <div class="button button-close">x</div>\
             </div>';
 
         $('.page').append(galleryTemplate);

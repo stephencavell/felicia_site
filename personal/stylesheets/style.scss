@@ -13,10 +13,6 @@ html {
     font-family: 'Nunito Sans', sans-serif;
 }
 
-// body {
-// 	margin: 0;
-// }
-
 h1, div {
     text-align: center;
 }
@@ -85,13 +81,14 @@ a {
 
 	width: 100%;
 
-	margin: .2rem;
+	padding: .2rem;
 
 	color: black;
 	font-size: 1.5rem;
 
 	cursor: pointer;
 }
+
 
 @import 'laptop';
 @import 'mobile';

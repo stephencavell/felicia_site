@@ -2,19 +2,25 @@
 html {
   font-family: 'Nunito Sans', sans-serif; }
 
-body {
-  height: 100%;
-  margin: 0;
-  padding: 0; }
-
 h1, div {
   text-align: center; }
+
+nav {
+  position: fixed;
+  top: 20px;
+  left: 50px;
+  z-index: 1;
+  text-align: left; }
 
 a {
   text-decoration: none;
   color: black;
   cursor: pointer;
   display: block; }
+
+.page {
+  height: 100%;
+  width: 100%; }
 
 .header-name {
   margin-top: 3rem;
@@ -27,13 +33,13 @@ a {
   width: 25rem;
   display: inline-block;
   position: relative;
-  margin: 3rem; }
+  margin: 3rem;
+  overflow: hidden; }
 
 .photo-nav-box:hover .photo-nav-text {
-  color: red; }
+  color: black; }
 
 .photo-nav-link, .photo-nav-image {
-  height: 100%;
   width: 100%; }
 
 .photo-nav-text {
@@ -42,8 +48,68 @@ a {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
+  padding: .2rem;
   color: white;
   font-size: 3rem;
   cursor: pointer; }
+
+@media only screen and (max-width: 1024px) {
+  html {
+    font-family: 'Nunito Sans', sans-serif; }
+
+  h1, div {
+    text-align: center; }
+
+  nav {
+    font-size: .8rem; }
+
+  .header-name {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    width: 100%; }
+
+  .photo-nav-box {
+    height: 15rem;
+    width: 15rem;
+    display: inline-block;
+    position: relative;
+    margin: 1rem;
+    overflow: hidden; }
+
+  .photo-nav-link, .photo-nav-image {
+    width: 100%; }
+
+  .photo-nav-text {
+    font-size: 1.5rem; } }
+@media only screen and (max-width: 738px) {
+  html {
+    font-family: 'Nunito Sans', sans-serif; }
+
+  h1, div {
+    text-align: center; }
+
+  nav {
+    position: static;
+    width: 100%;
+    text-align: center;
+    font-size: 1.2rem; }
+
+  .header-name {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    width: 100%; }
+
+  .photo-nav-box {
+    height: 18rem;
+    width: 18rem;
+    display: inline-block;
+    position: relative;
+    margin: 1rem;
+    overflow: hidden; }
+
+  .photo-nav-link, .photo-nav-image {
+    width: 100%; } }
 
 /*# sourceMappingURL=style.css.map */

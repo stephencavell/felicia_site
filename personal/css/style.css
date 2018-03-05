@@ -10,10 +10,18 @@
   display: none; }
 
 .button {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin: 1rem;
   z-index: 2;
   cursor: pointer;
   font-size: 2rem;
-  font-style: bold; }
+  font-style: bold;
+  opacity: .5; }
+
+.button:hover {
+  background-color: black;
+  color: white; }
 
 .button-left {
   position: absolute;
@@ -42,6 +50,15 @@
 .photo-box-image {
   max-width: 100%; }
 
+@media only screen and (orientation: landscape) {
+  .photo-box {
+    height: 100%; }
+
+  .photo-box-image {
+    max-height: 100%;
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%); } }
 .photo-box-text {
   position: absolute;
   top: 50%;
@@ -100,7 +117,7 @@ a {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
-  margin: .2rem;
+  padding: .2rem;
   color: black;
   font-size: 1.5rem;
   cursor: pointer; }
@@ -136,7 +153,7 @@ a {
     width: 100%; }
 
   .photo-nav-text {
-    color: white;
+    color: black;
     font-size: 1rem;
     cursor: pointer; } }
 @media only screen and (max-width: 738px) {
@@ -173,7 +190,7 @@ a {
     width: 100%; }
 
   .photo-nav-text {
-    color: white;
+    color: black;
     font-size: 1.2rem;
     cursor: pointer; } }
 

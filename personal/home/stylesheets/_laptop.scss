@@ -1,7 +1,7 @@
-@media only screen and (max-width: 738px){
+@media only screen and (max-width: 1024px){
 
 
-	$image-size: 18rem;
+	$image-size: 15rem;
 
 	html {
 	    font-family: 'Nunito Sans', sans-serif;
@@ -12,16 +12,13 @@
 	}
 
 	nav {
-		position: static;
-	    width: 100%;
-	    text-align: center;
-	    font-size: 1.2rem;
+	    font-size: .8rem;
 	}
 
 	.header-name {
 		margin-top: 3rem;
 		margin-bottom: 1rem;
-		font-size: 1.8rem;
+		font-size: 2.5rem;
 		width: 100%;
 	}
 
@@ -39,13 +36,7 @@
 
 	}
 
-	.photo-nav-box:hover {
 
-		.photo-nav-text {
-			color: white;
-		}
-
-	}
 
 	.photo-nav-link, .photo-nav-image {
 		width: 100%;
@@ -53,9 +44,7 @@
 
 	.photo-nav-text {
 
-		color: black;
-		font-size: 1.2rem;
+		font-size: 1.5rem;
 
-		cursor: pointer;
 	}
 }

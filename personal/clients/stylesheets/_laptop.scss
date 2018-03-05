@@ -12,9 +12,6 @@
 	}
 
 	nav {
-		// position: static;
-	 //    width: 100%;
-	 //    text-align: center;
 	    font-size: .8rem;
 	}
 
@@ -26,29 +23,19 @@
 	}
 
 	.photo-nav-box {
+		margin: 1.5rem;
+	}
 
-		height: $image-size;
+	.photo-nav-link {
+		max-height: $image-size;
 		width: $image-size;
 
-		display: inline-block;
-		position: relative;
-
-		margin: 1rem;
-
 		overflow: hidden;
-
 	}
 
-	.photo-nav-box:hover {
-
-		.photo-nav-text {
-			color: white;
-		}
-
-	}
-
-	.photo-nav-link, .photo-nav-image {
+	.photo-nav-image {
 		width: 100%;
+
 	}
 
 	.photo-nav-text {
