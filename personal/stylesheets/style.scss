@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito+Sans:400,700');
 @import 'gallery';
 
+
 //VARIABLES
 
 $image-size: 25rem;
@@ -12,11 +13,9 @@ html {
     font-family: 'Nunito Sans', sans-serif;
 }
 
-body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
+// body {
+// 	margin: 0;
+// }
 
 h1, div {
     text-align: center;
@@ -27,7 +26,8 @@ nav {
     top:20px;
     left:50px;
     z-index: 1;
-    width: 20rem;
+    // width: 20rem;
+    text-align: left;
     
 }
 
@@ -47,7 +47,6 @@ a {
 	margin-top: 3rem;
 	margin-bottom: 3rem;
 	font-size: 3rem;
-
 	width: 100%;
 }
 
@@ -86,8 +85,14 @@ a {
 
 	width: 100%;
 
+	margin: .2rem;
+
 	color: black;
 	font-size: 1.5rem;
 
 	cursor: pointer;
 }
+
+@import 'laptop';
+@import 'mobile';
+

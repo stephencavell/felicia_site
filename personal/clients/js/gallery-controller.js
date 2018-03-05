@@ -105,7 +105,7 @@ $(function() {
 
 	const urb = [
 		{'src': 'imgs/URB_back_LG'},
-		{'src': 'imgs/URB_cover_LG'},
+		{'src': 'imgs/URB_cover_LG.jpg'},
 		{'src': 'imgs/URB_disc_LG'}
 	];
 
