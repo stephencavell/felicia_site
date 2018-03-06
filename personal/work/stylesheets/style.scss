@@ -19,12 +19,11 @@ h1, div {
 
 nav {
     position: fixed;
-    top:20px;
-    left:50px;
+    top:3.5rem;
+    left: 4rem;
     z-index: 1;
-    // width: 20rem;
     text-align: left;
-    
+    font-size: .8rem;
 }
 
 a {
@@ -32,6 +31,7 @@ a {
     color: black;
     cursor: pointer;
     display: block;
+    
 }
 
 .page {

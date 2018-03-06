@@ -4,6 +4,14 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito+Sans:400,700');
 @import 'gallery';
 
+//Transitions
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
 
 //VARIABLES
 
@@ -19,12 +27,11 @@ h1, div {
 
 nav {
     position: fixed;
-    top:20px;
-    left:50px;
+    top: 3.5rem;
+    left: 4rem;
     z-index: 1;
-    // width: 20rem;
     text-align: left;
-    
+    font-size: .8rem;
 }
 
 a {
@@ -60,7 +67,7 @@ a {
 .photo-nav-box:hover {
 
 	.photo-nav-text {
-		text-decoration: underline;
+		opacity: 1;
 	}
 
 }
@@ -83,8 +90,11 @@ a {
 
 	color: black;
 	font-size: 1.5rem;
+	opacity: 0;
 
 	cursor: pointer;
+
+	@include transition(opacity, .1s);
 }
 
 

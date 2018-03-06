@@ -1,0 +1,44 @@
+//SCSS StyleSheet
+
+//imports:
+@import 'gallery';
+
+$image-size: 25rem;
+
+//Transitions
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+//VARIABLES
+
+.photo-nav-box:hover {
+
+	.photo-nav-text {
+		opacity: 1;
+	}
+
+}
+
+.photo-nav-text {
+
+	margin: 1rem;
+
+	color: black;
+	font-size: 1.5rem;
+	opacity: 0;
+	z-index: 5;
+
+	cursor: pointer;
+
+	@include transition(opacity, .1s);
+}
+
+
+@import 'clients-laptop';
+@import 'clients-mobile';
+

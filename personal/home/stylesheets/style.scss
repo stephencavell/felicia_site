@@ -17,12 +17,11 @@ h1, div {
 
 nav {
     position: fixed;
-    top:20px;
-    left:50px;
+    top: 3.5rem;
+    left: 4rem;
     z-index: 1;
-    // width: 20rem;
     text-align: left;
-    
+    font-size: .8rem;
 }
 
 a {
@@ -58,17 +57,7 @@ a {
 
 }
 
-.photo-nav-box:hover {
-
-	.photo-nav-text {
-		color: black;
-		// text-decoration: underline;
-	}
-
-}
-
 .photo-nav-link, .photo-nav-image {
-	//height: 100%;
 	width: 100%;
 }
 
@@ -86,6 +75,19 @@ a {
 	font-size: 3rem;
 
 	cursor: pointer;
+}
+
+.title {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  width: 100%;
+}
+
+#contact_info {
+	margin-top: 3rem;
+    margin-bottom: 3rem;
+    font-size: 1.5rem;
 }
 
 

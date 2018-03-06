@@ -1,0 +1,36 @@
+
+$image-size: 25rem;
+
+.photo-nav-text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	width: 100%;
+
+	padding: .2rem;
+
+	color: white;
+	font-size: 3rem;
+
+	cursor: pointer;
+}
+
+.title {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  width: 100%;
+}
+
+#contact_info {
+	margin-top: 3rem;
+    margin-bottom: 3rem;
+    font-size: 1.5rem;
+}
+
+
+@import 'home-laptop';
+@import 'home-mobile';
+

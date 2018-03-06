@@ -1,0 +1,37 @@
+//SCSS StyleSheet
+
+//imports:
+@import 'gallery';
+
+
+//VARIABLES
+$image-size: 25rem;
+
+.photo-nav-box:hover {
+
+	.photo-nav-text {
+		color: white;
+	}
+
+}
+
+.photo-nav-text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	width: 100%;
+
+	padding: .2rem;
+
+	color: black;
+	font-size: 1.5rem;
+
+	cursor: pointer;
+}
+
+
+@import 'work-laptop';
+@import 'work-mobile';
+

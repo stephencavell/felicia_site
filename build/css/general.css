@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito+Sans:400,700");
+.gallery-view {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  display: none; }
+
+.button {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin: 1rem;
+  z-index: 2;
+  cursor: pointer;
+  font-size: 2rem;
+  font-style: bold;
+  opacity: .5; }
+
+.button:hover {
+  background-color: black;
+  color: white; }
+
+.button-left {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%); }
+
+.button-right {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%); }
+
+.button-close {
+  position: absolute;
+  top: 0;
+  right: 0; }
+
+.photo-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%; }
+
+.photo-box-image {
+  max-width: 100%; }
+
+@media only screen and (orientation: landscape) {
+  .photo-box {
+    height: 100%; }
+
+  .photo-box-image {
+    max-height: 100%;
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%); } }
+.photo-box-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  color: white;
+  font-size: 1.5rem; }
+
+html {
+  font-family: 'Nunito Sans', sans-serif; }
+
+div {
+  text-align: center; }
+
+nav {
+  position: fixed;
+  top: 3.5rem;
+  left: 4rem;
+  z-index: 1;
+  text-align: left;
+  font-size: .8rem; }
+
+a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  display: block; }
+
+.page {
+  height: 100%;
+  width: 100%; }
+
+.header-name {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  font-size: 3rem;
+  width: 100%; }
+
+.photo-nav-box {
+  height: 25rem;
+  width: 25rem;
+  display: inline-block;
+  position: relative;
+  margin: 3rem; }
+
+.photo-nav-link {
+  width: 100%;
+  height: 100%;
+  overflow: hidden; }
+
+.photo-nav-image {
+  width: 100%; }
+
+#contact_info {
+  display: none;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  font-size: 1.5rem; }
+
+.title {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  width: 100%; }
+
+@media only screen and (max-width: 1024px) {
+  .header-name {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    font-size: 2.5rem; }
+
+  .photo-nav-text {
+    font-size: 1.5rem; }
+
+  .photo-nav-box {
+    margin: 1rem;
+    height: 15rem;
+    width: 15rem; } }
+@media only screen and (max-width: 738px) {
+  .header-name {
+    font-size: 1.8rem; }
+
+  nav, .navigation {
+    position: static;
+    width: 100%;
+    text-align: center;
+    font-size: 1.2rem; }
+
+  .photo-nav-box {
+    height: 18rem;
+    width: 18rem; }
+
+  .title, #contact_info {
+    font-size: 1.2rem; } }
+
+/*# sourceMappingURL=general.css.map */

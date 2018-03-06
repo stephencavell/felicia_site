@@ -1,0 +1,21 @@
+
+@media only screen and (max-width: 1024px){
+
+	$image-size: 15rem;
+
+	.header-name {
+		margin-top: 3rem;
+		margin-bottom: 1rem;
+		font-size: 2.5rem;
+	}
+
+	.photo-nav-text {
+		font-size: 1.5rem;
+	}
+
+	.photo-nav-box {
+		margin: 1rem;
+		height: $image-size;
+		width: $image-size;
+	}
+}
