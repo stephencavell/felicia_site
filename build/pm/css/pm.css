@@ -63,9 +63,6 @@ h1, h3, div {
   -o-transition: opacity 0.1s;
   transition: opacity 0.1s; }
 
-@media only screen and (max-width: 1024px) {
-  .header-name {
-    font-size: 2.5rem; } }
 @media only screen and (max-width: 738px) {
   .title, #contact_info {
     font-size: 1.2rem; } }

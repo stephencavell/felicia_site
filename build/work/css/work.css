@@ -67,15 +67,8 @@
   color: white;
   font-size: 1.5rem; }
 
-.photo-nav-box {
-  height: 25rem;
-  width: 25rem; }
-
 .photo-nav-box:hover .photo-nav-text {
   color: white; }
-
-.photo-nav-link, .photo-nav-image {
-  width: 100%; }
 
 .photo-nav-text {
   position: absolute;
@@ -91,12 +84,7 @@
 @media only screen and (max-width: 1024px) {
   .header-name {
     margin-top: 3rem;
-    margin-bottom: 1rem;
-    font-size: 2.5rem; }
-
-  .photo-nav-box {
-    height: 15rem;
-    width: 15rem; }
+    margin-bottom: 1rem; }
 
   .photo-nav-text {
     font-size: 1rem; } }
