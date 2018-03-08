@@ -1,0 +1,46 @@
+.photo-nav-box {
+  height: 25rem;
+  width: 25rem; }
+
+.photo-nav-link, .photo-nav-image {
+  width: 100%; }
+
+.photo-nav-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  padding: .2rem;
+  color: white;
+  font-size: 3rem;
+  cursor: pointer; }
+
+.title {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  width: 100%; }
+
+#contact_info {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  font-size: 1.5rem; }
+
+@media only screen and (max-width: 1024px) {
+  .header-name {
+    margin-top: 3rem;
+    margin-bottom: 1rem; }
+
+  .photo-nav-box {
+    height: 15rem;
+    width: 15rem; }
+
+  .photo-nav-text {
+    font-size: 1.5rem; } }
+@media only screen and (max-width: 738px) {
+  .photo-nav-box {
+    height: 18rem;
+    width: 18rem; } }
+
+/*# sourceMappingURL=home.css.map */
