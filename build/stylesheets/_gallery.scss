@@ -1,4 +1,12 @@
 //GALLERY STYLING
+
+@mixin userselect($val) {
+	-webkit-user-select: $val; /* Safari 3.1+ */
+    -moz-user-select: $val; /* Firefox 2+ */
+    -ms-user-select: $val; /* IE 10+ */
+    user-select: $val; /* Standard syntax */
+}
+
 .gallery-view {
 
 	position: fixed;
@@ -22,20 +30,30 @@
 	z-index: 2;
 	cursor: pointer;
 
-	font-size: 2rem;
+	font-size: 3rem;
 	font-style: bold;
-	opacity: .5;
+	opacity: .2;
+
+	@include userselect(none);
+
+	width: 40px;
+	height: 40px;
 }
 
 .button:hover {
-	background-color: black;
-	color: white;
+	opacity: 1;
 }
+
+
 .button-left {
 	position: absolute;
 	top: 50%;
 	left: 0;
 	transform: translate(0, -50%);
+
+	background-image: url('../imgs/chevron-left.svg');
+	background-size: 100% 100%;
+
 }
 
 .button-right {
@@ -43,6 +61,10 @@
 	top: 50%;
 	right: 0;
 	transform: translate(0, -50%);
+
+	background-image: url('../imgs/chevron-right.svg');
+	background-size: 100% 100%;
+
 }
 
 .button-close {
@@ -50,6 +72,8 @@
 	top: 0;
 	right: 0;
 
+	background-image: url('../imgs/x.svg');
+	background-size: 100% 100%;
 }
 
 .photo-box {
