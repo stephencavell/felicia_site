@@ -33,6 +33,12 @@ $image-size: 25rem;
 	cursor: pointer;
 
 	@include transition(opacity, .1s);
+
+	letter-spacing: .5rem;
+}
+
+.small-text {
+	font-size: 1rem;
 }
 
 

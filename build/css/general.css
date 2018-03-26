@@ -90,7 +90,8 @@ body {
   margin: 0; }
 
 div {
-  text-align: center; }
+  text-align: center;
+  letter-spacing: 1rem; }
 
 nav {
   position: fixed;
@@ -98,7 +99,8 @@ nav {
   left: 4rem;
   z-index: 1;
   text-align: left;
-  font-size: .8rem; }
+  font-size: .8rem;
+  letter-spacing: .5rem; }
 
 a {
   text-decoration: none;
@@ -154,8 +156,8 @@ a {
 
   .photo-nav-box {
     margin: 1rem;
-    height: 15rem;
-    width: 15rem; } }
+    height: 20rem;
+    width: 20rem; } }
 @media only screen and (max-width: 738px) {
   .header-name {
     font-size: 1.8rem; }

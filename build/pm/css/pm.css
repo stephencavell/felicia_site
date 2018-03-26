@@ -61,7 +61,9 @@ h1, h3, div {
   -moz-transition: opacity 0.1s;
   -ms-transition: opacity 0.1s;
   -o-transition: opacity 0.1s;
-  transition: opacity 0.1s; }
+  transition: opacity 0.1s;
+  font-size: 1rem;
+  letter-spacing: normal; }
 
 @media only screen and (max-width: 738px) {
   .title, #contact_info {

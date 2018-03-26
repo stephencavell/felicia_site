@@ -8,6 +8,7 @@ $image-size: 25rem;
 
 html {
     font-family: 'Nunito Sans', sans-serif;
+
 }
 
 body {
@@ -16,6 +17,7 @@ body {
 
 div {
 	text-align: center;
+	letter-spacing: 1rem;
 }
 
 
@@ -26,6 +28,7 @@ nav {
     z-index: 1;
     text-align: left;
     font-size: .8rem;
+    letter-spacing: .5rem;
 }
 
 a {
@@ -55,9 +58,6 @@ a {
 	position: relative;
 
 	margin: 3rem;
-
-	//border: solid black 1px;
-
 }
 
 .photo-nav-link {
